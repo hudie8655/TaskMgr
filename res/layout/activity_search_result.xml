@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background" >
+
+    <RelativeLayout
+        android:id="@+id/search_result_top_title"
+        android:layout_width="fill_parent"
+        android:layout_height="40dip"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/top_title_bk"
+          >
+
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="45dip"
+            android:layout_height="23dip"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/icon_button_bk"
+            android:layout_marginLeft="16dip"
+            android:layout_centerVertical="true"
+            android:textColor="@drawable/green"
+            android:text="@string/back" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/not_search_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/no_search_result"
+        android:textColor="#ffff0000"
+        android:textSize="15dip"
+        android:visibility="gone" />
+
+    <ListView
+        android:id="@+id/search_result_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/search_result_top_title"
+        android:cacheColorHint="#00000000"
+        android:divider="@drawable/list_separatedbar"
+        android:dividerHeight="2dip"
+        android:drawSelectorOnTop="false"
+        android:fadingEdge="none"
+        android:listSelector="@android:color/transparent"
+        android:scrollbars="none"
+        android:scrollingCache="false" >
+    </ListView>
+
+    <ImageView
+        android:id="@+id/search_result_bottom_title"
+        android:layout_width="fill_parent"
+        android:layout_height="40dip"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/top_title_bk" />
+
+</RelativeLayout>

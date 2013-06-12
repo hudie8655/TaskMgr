@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+<!--     <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:paddingBottom="15dip"
+        android:paddingLeft="15dip"
+        android:paddingRight="15dip"
+        android:paddingTop="30dip" >
+
+        <TextView
+            android:id="@+id/tv_progress_cpu_usage"
+            android:layout_width="40dip"
+            android:layout_height="wrap_content"
+            android:text="@string/cpu_usage"
+            android:textSize="15dip" />
+
+        <ProgressBar
+            android:id="@+id/progress_cpu"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="190dip"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/tv_progress_cpu_usage" />
+
+        <TextView
+            android:id="@+id/tv_progress_cpu_rate"
+            android:layout_width="30dip"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="15dip"
+            android:layout_toRightOf="@id/progress_cpu"
+            android:text="0%"
+            android:textSize="15dip" />
+
+        <TextView
+            android:id="@+id/tv_progress_memory_usage"
+            android:layout_width="40dip"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_progress_cpu_usage"
+            android:layout_marginTop="13dip"
+            android:text="@string/mem_usage"
+            android:textSize="15dip" />
+
+        <ProgressBar
+            android:id="@+id/progress_memory"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="190dip"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/progress_cpu"
+            android:layout_marginTop="13dip"
+            android:layout_toRightOf="@id/tv_progress_memory_usage" />
+
+        <TextView
+            android:id="@+id/tv_progress_memory_rate"
+            android:layout_width="30dip"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/tv_progress_cpu_rate"
+            android:layout_marginLeft="15dip"
+            android:layout_marginTop="13dip"
+            android:layout_toRightOf="@id/progress_memory"
+            android:text="0%"
+            android:textSize="15dip" />
+
+        <TextView
+            android:id="@+id/tv_memory_using"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_progress_memory_usage"
+            android:layout_marginTop="13dip"
+            android:text="@string/mem_using"
+            android:textSize="15dip" />
+
+        <TextView
+            android:id="@+id/tv_memory_using_rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_progress_memory_usage"
+            android:layout_marginLeft="10dip"
+            android:layout_marginTop="13dip"
+            android:layout_toRightOf="@+id/tv_memory_using"
+            android:text="100%"
+            android:textSize="15dip" />
+
+        <TextView
+            android:id="@+id/tv_memory_free"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_memory_using"
+            android:layout_marginTop="13dip"
+            android:text="@string/mem_free"
+            android:textSize="15dip" />
+
+        <TextView
+            android:id="@+id/tv_memory_free_rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_memory_using"
+            android:layout_marginLeft="10dip"
+            android:layout_marginTop="13dip"
+            android:layout_toRightOf="@+id/tv_memory_free"
+            android:text="100%"
+            android:textSize="15dip" />
+
+        <TextView
+            android:id="@+id/tv_memory_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_memory_free"
+            android:layout_marginTop="13dip"
+            android:text="@string/mem_total"
+            android:textSize="15dip" />
+
+        <TextView
+            android:id="@+id/tv_memory_total_rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_memory_free"
+            android:layout_marginLeft="10dip"
+            android:layout_marginTop="13dip"
+            android:layout_toRightOf="@+id/tv_memory_total"
+            android:text="100%"
+            android:textSize="15dip" />
+    </RelativeLayout> -->
+
+    <GridView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:horizontalSpacing="10dip"
+        android:listSelector="@drawable/grid_select"
+        android:numColumns="4"
+        android:scrollbars="none"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="10dip" >
+    </GridView>
+
+</LinearLayout>

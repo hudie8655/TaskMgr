@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="55dip"
+    android:descendantFocusability="blocksDescendants"
+    android:padding="10dip" >
+
+    <ImageView
+        android:id="@+id/app_list_app_icon"
+        android:layout_width="40dip"
+        android:layout_height="40dip"
+        android:layout_centerVertical="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/gridview_press" />
+
+    <TextView
+        android:id="@+id/app_list_app_name"
+        android:layout_width="130dip"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dip"
+        android:layout_toRightOf="@id/app_list_app_icon"
+        android:ellipsize="marquee"
+        android:maxLines="1"
+        android:text="name"
+        android:textColor="@drawable/grey"
+        android:textSize="15dip" />
+
+    <TextView
+        android:id="@+id/app_list_app_package_name"
+        android:layout_width="130dip"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/app_list_app_name"
+        android:layout_marginLeft="12dip"
+        android:layout_toRightOf="@id/app_list_app_icon"
+        android:ellipsize="marquee"
+        android:maxLines="1"
+        android:text="package"
+        android:textColor="@drawable/grey"
+        android:textSize="15dip" />
+
+    <TextView
+        android:id="@+id/app_list_app_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="12dip"
+        android:layout_toRightOf="@id/app_list_app_name"
+        android:ellipsize="marquee"
+        android:maxLines="1"
+        android:text="@string/version"
+        android:textColor="@drawable/grey"
+        android:textSize="15dip" />
+
+</RelativeLayout>

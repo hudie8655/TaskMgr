@@ -1,0 +1,322 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical" >
+
+    <TableLayout
+        android:id="@+id/top_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="40dip"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/top_title_bk"
+        android:orientation="horizontal" >
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="3" >
+
+            <TextView
+                android:id="@+id/task_mgr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dip"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/task_mgr"
+                android:textColor="@drawable/whilte"
+                android:textSize="16dip" />
+
+            <TextView
+                android:id="@+id/app_mgr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dip"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/app_mgr"
+                android:textColor="@drawable/green"
+                android:textSize="16dip" />
+
+            <TextView
+                android:id="@+id/sys_res"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dip"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/sys_res"
+                android:textColor="@drawable/green"
+                android:textSize="16dip" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="3" >
+
+            <ImageView
+                android:id="@+id/task_mgr_line"
+                android:layout_width="30dip"
+                android:layout_height="2dip"
+                android:layout_marginTop="5dip"
+                android:layout_weight="1"
+                android:scaleType="center"
+                android:src="@drawable/white_line"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/app_mgr_line"
+                android:layout_width="30dip"
+                android:layout_height="2dip"
+                android:layout_marginTop="5dip"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:scaleType="center"
+                android:src="@drawable/white_line"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:id="@+id/sys_res_line"
+                android:layout_width="30dip"
+                android:layout_height="2dip"
+                android:layout_marginTop="5dip"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:scaleType="center"
+                android:src="@drawable/white_line"
+                android:visibility="invisible" />
+        </TableRow>
+    </TableLayout>
+
+    <com.taskmgr.util.HorizontalSlide
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/horizontal_slide_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/top_layout" >
+
+        <LinearLayout
+            android:id="@+id/task_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:padding="10dip" >
+
+            <ListView
+                android:id="@+id/task_list"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:cacheColorHint="#00000000"
+                android:divider="@drawable/list_separatedbar"
+                android:dividerHeight="2dip"
+                android:drawSelectorOnTop="false"
+                android:fadingEdge="none"
+                android:listSelector="@android:color/transparent"
+                android:padding="5dip"
+                android:scrollbars="none"
+                android:scrollingCache="false"
+                android:visibility="gone" >
+            </ListView>
+
+            <GridView
+                android:id="@+id/task_grid"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:horizontalSpacing="10dip"
+                android:listSelector="@drawable/grid_select"
+                android:numColumns="4"
+                android:scrollbars="none"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="10dip" >
+            </GridView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/app_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:padding="10dip" >
+
+            <ListView
+                android:id="@+id/app_list"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:cacheColorHint="#00000000"
+                android:divider="@drawable/list_separatedbar"
+                android:dividerHeight="2dip"
+                android:drawSelectorOnTop="false"
+                android:fadingEdge="none"
+                android:listSelector="@android:color/transparent"
+                android:padding="5dip"
+                android:scrollbars="none"
+                android:scrollingCache="false"
+                android:visibility="gone" >
+            </ListView>
+
+            <GridView
+                android:id="@+id/app_grid"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:horizontalSpacing="10dip"
+                android:listSelector="@drawable/grid_select"
+                android:numColumns="4"
+                android:scrollbars="none"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="10dip" >
+            </GridView>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:paddingBottom="15dip"
+            android:paddingLeft="15dip"
+            android:paddingRight="15dip"
+            android:paddingTop="30dip" >
+
+            <TextView
+                android:id="@+id/tv_progress_cpu_usage"
+                android:layout_width="40dip"
+                android:layout_height="wrap_content"
+                android:text="@string/cpu_usage"
+                android:textSize="15dip" />
+
+            <ProgressBar
+                android:id="@+id/progress_cpu"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_width="190dip"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tv_progress_cpu_usage" />
+
+            <TextView
+                android:id="@+id/tv_progress_cpu_rate"
+                android:layout_width="30dip"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="15dip"
+                android:layout_toRightOf="@id/progress_cpu"
+                android:text="0%"
+                android:textSize="15dip" />
+
+            <TextView
+                android:id="@+id/tv_progress_memory_usage"
+                android:layout_width="40dip"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_progress_cpu_usage"
+                android:layout_marginTop="13dip"
+                android:text="@string/mem_usage"
+                android:textSize="15dip" />
+
+            <ProgressBar
+                android:id="@+id/progress_memory"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_width="190dip"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/progress_cpu"
+                android:layout_marginTop="13dip"
+                android:layout_toRightOf="@id/tv_progress_memory_usage" />
+
+            <TextView
+                android:id="@+id/tv_progress_memory_rate"
+                android:layout_width="30dip"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/tv_progress_cpu_rate"
+                android:layout_marginLeft="15dip"
+                android:layout_marginTop="13dip"
+                android:layout_toRightOf="@id/progress_memory"
+                android:text="0%"
+                android:textSize="15dip" />
+
+            <TextView
+                android:id="@+id/tv_memory_using"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_progress_memory_usage"
+                android:layout_marginTop="13dip"
+                android:text="@string/mem_using"
+                android:textSize="15dip" />
+
+            <TextView
+                android:id="@+id/tv_memory_using_rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_progress_memory_usage"
+                android:layout_marginLeft="10dip"
+                android:layout_marginTop="13dip"
+                android:layout_toRightOf="@+id/tv_memory_using"
+                android:text="100%"
+                android:textSize="15dip" />
+
+            <TextView
+                android:id="@+id/tv_memory_free"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_memory_using"
+                android:layout_marginTop="13dip"
+                android:text="@string/mem_free"
+                android:textSize="15dip" />
+
+            <TextView
+                android:id="@+id/tv_memory_free_rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_memory_using"
+                android:layout_marginLeft="10dip"
+                android:layout_marginTop="13dip"
+                android:layout_toRightOf="@+id/tv_memory_free"
+                android:text="100%"
+                android:textSize="15dip" />
+
+            <TextView
+                android:id="@+id/tv_memory_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_memory_free"
+                android:layout_marginTop="13dip"
+                android:text="@string/mem_total"
+                android:textSize="15dip" />
+
+            <TextView
+                android:id="@+id/tv_memory_total_rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_memory_free"
+                android:layout_marginLeft="10dip"
+                android:layout_marginTop="13dip"
+                android:layout_toRightOf="@+id/tv_memory_total"
+                android:text="100%"
+                android:textSize="15dip" />
+        </RelativeLayout>
+    </com.taskmgr.util.HorizontalSlide>
+
+    <RelativeLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="35dip"
+        android:layout_alignParentBottom="true" >
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="22dip"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/bottom_title_bk" />
+
+        <ImageButton
+            android:id="@+id/btn_change_view_mode"
+            android:layout_width="28dip"
+            android:layout_height="28dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="55dip"
+            android:background="@android:color/transparent"
+            android:scaleType="centerInside"
+            android:src="@drawable/listview_press" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,48 @@
+<resources>
+
+    <string name="app_name">taskmgr</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">TaskManager</string>
+    <string name="task_mgr">|任务管理|</string>
+    <string name="app_mgr">|应用管理|</string>
+    <string name="sys_res">|系统资源|</string>
+    <string name="grid_show">网格显示</string>
+    <string name="list_show">列表显示</string>
+    <string name="manager_task">管理任务 </string>
+    <string name="manager_app">管理应用 </string>
+    <string name="notfound_program">找不到程序</string>
+    <string name="version">版本:</string>
+    <string name="cpu_usage">cpu:</string>
+    <string name="mem_usage">内存:</string>
+    <string name="mem_using">已用内存:</string>
+    <string name="mem_free">可用内存:</string>
+    <string name="mem_total">内存总数:</string>
+    <string name="search_app">搜索应用</string>
+    <string name="refresh_app">刷新列表</string>
+    <string name="exit_program">退出程序</string>
+    <string name="search_hint">输入你想找的应用名称</string>
+    <string name="search_label">查找应用</string>
+    <string name="close_all_app">关闭所有</string>
+    <string name="no_search_result">没有用找到应用,点击文字返回</string>
+    <string name="killall_app_prompt">系统以外的进程已杀死</string>
+    <string name="back">返回</string>
+    
+
+    <string-array name="task_dialog_item">
+        <item>取消</item>
+        <item>打开程序</item>
+        <item>杀死进程</item>
+        <item>查看详情</item>
+    </string-array>
+    <string-array name="app_dialog_item">
+        <item>取消</item>
+        <item>打开程序</item>
+        <item>查看详情</item>
+    </string-array>
+
+    <drawable name="grey">#ff4D4948</drawable>
+    <drawable name="whilte">#ffffffff</drawable>
+    <drawable name="green">#ff0093DD</drawable>
+
+</resources>
